@@ -5,25 +5,22 @@ const options = {
     swaggerDefinition: {
         openapi: '3.0.0',
         info: {
-            title: 'Adoption System API',
+            title: 'Opinion System API',
             version: '1.0.0',
-            description: 'API para un sistema de gestion de adopcion de mascotas',
-            license: {
+            description: 'API para un sistema de gestion de opniniones',
+            contact: {
                 name: 'Fredy Alexander García Sicajau',
                 email: 'alexander.garcia.sicajau@gmail.com'
             }
         },
         servers: [
             {
-                url: 'http://127.0.0.1:3002/adoptionSystem/v1'
+                url: 'http://127.0.0.1:3004/managementOpinion/v1'
             }
         ]
     },
     apis:[
-        './src/auth/auth.routes.js',
-        './src/users/users.routes.js',
-        './src/pets/pets.routes.js',
-        './src/appointments/appointments.routes.js'
+        './src/auth/auth.routes.js'
     ]
 }
 
