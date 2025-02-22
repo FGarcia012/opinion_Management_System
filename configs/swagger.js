@@ -5,9 +5,9 @@ const options = {
     swaggerDefinition: {
         openapi: '3.0.0',
         info: {
-            title: 'Opinion System API',
+            title: 'Opinion Management System API',
             version: '1.0.0',
-            description: 'API para un sistema de gestion de opniniones',
+            description: 'API para un sistema de gestión de opiniones',
             contact: {
                 name: 'Fredy Alexander García Sicajau',
                 email: 'alexander.garcia.sicajau@gmail.com'
@@ -19,12 +19,14 @@ const options = {
             }
         ]
     },
-    apis:[
+    apis: [
         './src/auth/auth.routes.js',
         './src/user/user.routes.js',
-        './src/publication/publication.routes.js'
+        './src/publication/publication.routes.js',
+        './src/category/category.routes.js',
+        './src/comment/comment.routes.js'
     ]
-}
+};
 
 const swaggerDocs = swaggerJSDoc(options);
 

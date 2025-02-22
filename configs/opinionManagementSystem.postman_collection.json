@@ -1,0 +1,580 @@
+{
+	"info": {
+		"_postman_id": "97877025-21fb-4cdd-bba5-ab71d1c0b318",
+		"name": "opinionManagementSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37658894"
+	},
+	"item": [
+		{
+			"name": "Publicaciones",
+			"item": [
+				{
+					"name": "AddPublications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I5MGJiMzIxODVlZTBiN2QzZjUwYzQiLCJpYXQiOjE3NDAxOTQxNjYsImV4cCI6MTc0MDE5Nzc2Nn0.ofPsuM4XBxT0z0wrUmT4_wUyWUl6spqqG4A8bFpOObY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"TICS\",\r\n    \"descripcion\": \"Como podemos aprender tecnologias nuevas?\",\r\n    \"autor\" : \"67b90bb32185ee0b7d3f50c4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/publication/addPublication",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"publication",
+								"addPublication"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPublications",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/publication/getPublication",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"publication",
+								"getPublication"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPublications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I5MGJiMzIxODVlZTBiN2QzZjUwYzQiLCJpYXQiOjE3NDAxOTQxNjYsImV4cCI6MTc0MDE5Nzc2Nn0.ofPsuM4XBxT0z0wrUmT4_wUyWUl6spqqG4A8bFpOObY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Nuevo Título\",\r\n  \"categoria\": \"67b940348d40f0d5e78d5ec9\", \r\n  \"descripcion\": \"Nueva descripción de la publicación\",\r\n  \"autor\": \"67b90bb32185ee0b7d3f50c4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/publication/updatePublication/67b944524ef994d840739b3d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"publication",
+								"updatePublication",
+								"67b944524ef994d840739b3d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPublications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I5MGJiMzIxODVlZTBiN2QzZjUwYzQiLCJpYXQiOjE3NDAxOTQxNjYsImV4cCI6MTc0MDE5Nzc2Nn0.ofPsuM4XBxT0z0wrUmT4_wUyWUl6spqqG4A8bFpOObY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/publication/deletePublication/67b94253582ac23bb6cd7a91",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"publication",
+								"deletePublication",
+								"67b94253582ac23bb6cd7a91"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorys",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I4ZTY1OTNlYWYxZWQzMTkzMTA3YTciLCJpYXQiOjE3NDAyMDAwMTIsImV4cCI6MTc0MDIwMzYxMn0.bcd_Zg1uRODNeCRDiULYIx2mCob8Q9sdhmAYwzFrcG8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Nombre de la categoría\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/category/addCategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"category",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I5NTQ3NDcyYzgzMWVkNTExMzQ0YTIiLCJpYXQiOjE3NDAyMDAyNDcsImV4cCI6MTc0MDIwMzg0N30.w_sUtgdNH3mP4c8_BetIv7UBQ6FcHolVW8tp2KR6CYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Entretenimiento\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/category/updateCategory/67b9583494d7b49bdd14d6b9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"category",
+								"updateCategory",
+								"67b9583494d7b49bdd14d6b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I5NTQ3NDcyYzgzMWVkNTExMzQ0YTIiLCJpYXQiOjE3NDAyMDAyNDcsImV4cCI6MTc0MDIwMzg0N30.w_sUtgdNH3mP4c8_BetIv7UBQ6FcHolVW8tp2KR6CYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/category/deleteCategory/67b940348d40f0d5e78d5ec9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"category",
+								"deleteCategory",
+								"67b940348d40f0d5e78d5ec9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comentarios",
+			"item": [
+				{
+					"name": "AddCommen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I5MGJiMzIxODVlZTBiN2QzZjUwYzQiLCJpYXQiOjE3NDAyMDI1MzEsImV4cCI6MTc0MDIwNjEzMX0.Z9eaXIqct4zq33Tva3bsWMp6rMnoHrf0rhnEfXVdzqo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Título del comentario\",\r\n  \"descripcion\": \"Descripción del comentario\",\r\n  \"publication\": \"67b946d2e51b492600a401cc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/comment/addComment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"comment",
+								"addComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarComment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/comment/getComments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"comment",
+								"getComments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I5MGJiMzIxODVlZTBiN2QzZjUwYzQiLCJpYXQiOjE3NDAyMDI1MzEsImV4cCI6MTc0MDIwNjEzMX0.Z9eaXIqct4zq33Tva3bsWMp6rMnoHrf0rhnEfXVdzqo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Nuevo título del comentario\",\r\n    \"descripcion\": \"Nueva descripción del comentario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/comment/updateComment/67b962b6a14879dd4f72eeff",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"comment",
+								"updateComment",
+								"67b962b6a14879dd4f72eeff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I5MGJiMzIxODVlZTBiN2QzZjUwYzQiLCJpYXQiOjE3NDAyMDI1MzEsImV4cCI6MTc0MDIwNjEzMX0.Z9eaXIqct4zq33Tva3bsWMp6rMnoHrf0rhnEfXVdzqo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3004/managementOpinion/v1/comment/deleteComment/67b962b6a14879dd4f72eeff",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3004",
+							"path": [
+								"managementOpinion",
+								"v1",
+								"comment",
+								"deleteComment",
+								"67b962b6a14879dd4f72eeff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agregar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "nuevo",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "uno",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "nuevouno",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nuevouno-2023565@kinal.edu.gt",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "EYQ/MSm5.!8MaCcisandfandsan",
+							"type": "text"
+						},
+						{
+							"key": "profilePicture",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "phone",
+							"value": "46459878",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3004/managementOpinion/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3004",
+					"path": [
+						"managementOpinion",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logear usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nuevouno-2023565@kinal.edu.gt\",\r\n    \"password\": \"EYQ/MSm5.!8MaCcisandfandsan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3004/managementOpinion/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3004",
+					"path": [
+						"managementOpinion",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enlaceDeDocumentacion",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

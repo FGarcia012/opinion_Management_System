@@ -1,15 +1,14 @@
 import { Schema, model } from "mongoose";
 
-const publicationSchema = Schema({
+const commentSchema = Schema({
     titulo: {
         type: String,
         required: [true, " Titulo is requiered "]
     },
-    categoria: {
+    publication: {
         type: Schema.Types.ObjectId,
-        ref: "Category",
-        default: "General",
-        required: [true, " Categoria is requiered "]
+        ref: "Publication",
+        required: [true, " Publication is requiered "]
     },
     descripcion: {
         type: String,
@@ -24,16 +23,15 @@ const publicationSchema = Schema({
         type: Boolean,
         default: true
     }
-},
-{
+}, {
     versionKey: false,
     timestamps: true
 });
 
-publicationSchema.methods.toJSON = function () {
-    const { __v, _id, ...publicacion } = this.toObject();
-    publicacion.pid = publicacion._id;
-    return publicacion;
+commentSchema.methods.toJSON = function () {
+    const { __v, _id, ...comentario } = this.toObject();
+    comentario.ccid = comentario._id;
+    return comentario;
 };
 
-export default model("Publication", publicationSchema);
+export default model("Comentario", commentSchema);
