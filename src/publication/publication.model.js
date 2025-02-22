@@ -8,7 +8,7 @@ const publicationSchema = Schema({
     categoria: {
         type: Schema.Types.ObjectId,
         ref: "Category",
-        default: "67b940348d40f0d5e78d5ec9",
+        default: "General",
         required: [true, " Categoria is requiered "]
     },
     descripcion: {
