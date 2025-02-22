@@ -10,6 +10,8 @@ import userRoutes from "../src/user/user.routes.js"
 import publicationRoutes from "../src/publication/publication.routes.js"
 import categoryRoutes from "../src/category/category.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
+import {createAdminUser} from "../src/utils/createAdminUser.js"
+import {createDefaultCategory} from "../src/utils/createDefaultCategory.js"
 import { swaggerDocs, swaggerUi } from "../configs/swagger.js"
 
 const middlewares = (app) => {
@@ -26,6 +28,7 @@ const routes = (app) => {
     app.use("/managementOpinion/v1/user", userRoutes)
     app.use("/managementOpinion/v1/publication", publicationRoutes)
     app.use("/managementOpinion/v1/category", categoryRoutes)
+    /*app.use("/managementOpinion/v1/comment", commentRoutes)*/
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
@@ -44,6 +47,8 @@ export const initServer = () => {
         middlewares(app)
         conecetarDB()
         routes(app)
+        createAdminUser()
+        createDefaultCategory()
         const port = process.env.PORT || 3004
         app.listen(port, () => {
             console.log(`Server running on port ${port} matutina`)
