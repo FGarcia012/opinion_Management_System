@@ -6,6 +6,9 @@ import helmet from "helmet"
 import cors from "cors"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/auth.routes.js"
+import userRoutes from "../src/user/user.routes.js"
+import publicationRoutes from "../src/publication/publication.routes.js"
+import categoryRoutes from "../src/category/category.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import { swaggerDocs, swaggerUi } from "../configs/swagger.js"
 
@@ -20,6 +23,9 @@ const middlewares = (app) => {
 
 const routes = (app) => {
     app.use("/managementOpinion/v1/auth", authRoutes)
+    app.use("/managementOpinion/v1/user", userRoutes)
+    app.use("/managementOpinion/v1/publication", publicationRoutes)
+    app.use("/managementOpinion/v1/category", categoryRoutes)
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
